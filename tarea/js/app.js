@@ -3,5 +3,7 @@ async function mostrarPosts() {
   try {
     // 1. Haz el fetch a la URL de las publicaciones del usuario 1
     const res = await fetch("https://jsonplaceholder.typicode.com/posts?userId=1");
+    // 2. Convierte la respuesta a JSON
+    const posts = await res.json();
   }
 }
