@@ -5,5 +5,9 @@ async function mostrarPosts() {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts?userId=1");
     // 2. Convierte la respuesta a JSON
     const posts = await res.json();
+    // 3. Muestra los títulos en la lista con map, join e innerHTML
+    lista.innerHTML = posts
+      .map(p => `<li>${p.title}</li>`)
+      .join("");
   }
 }
