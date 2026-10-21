@@ -9,5 +9,9 @@ async function mostrarPosts() {
     lista.innerHTML = posts
       .map(p => `<li>${p.title}</li>`)
       .join("");
+      } catch (error) {
+    // 4. Muestra el mensaje "No se pudo cargar la información"
+    lista.innerHTML = "<li>No se pudo cargar la información</li>";
   }
 }
+mostrarPosts();
